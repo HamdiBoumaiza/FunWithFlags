@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FunWithFlags</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="country_name">Name : %S</string>
+    <string name="country_population">Population : %S</string>
+    <string name="country_capital">Capital : %S</string>
+    <string name="country_region">Region : %S , %S</string>
+    <string name="country_calling_code">Call Code : %S</string>
+    <string name="country_currency">Currency :  %S</string>
+    <string name="country_language">Language :  %S</string>
+
+
+    <string name="action_search">Search</string>
+
+</resources>

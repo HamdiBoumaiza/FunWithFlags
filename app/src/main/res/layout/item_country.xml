@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="country"
+                type="com.hamdi.funwithflags.model.CountryModel"/>
+
+        <variable
+                name="clickListener"
+                type="com.hamdi.funwithflags.ui.listcountries.ICountryClickListener"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:onClick="@{() -> clickListener.clickItem(country)}"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+        <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <TextView
+                android:id="@+id/nom"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="visible"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeStepGranularity="2sp"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@{country.name}"
+                android:textStyle="bold"
+                android:background="#48000000"
+                tools:text="nom" tools:targetApi="o"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
